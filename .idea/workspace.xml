@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="eb4ef001-2a6d-4ac3-b27a-dcfe78a7ab78" name="Default" comment="" />
+    <list default="true" id="eb4ef001-2a6d-4ac3-b27a-dcfe78a7ab78" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/lib/todo/database.ex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/todo/cache.ex" beforeDir="false" afterPath="$PROJECT_DIR$/lib/todo/cache.ex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/todo/server.ex" beforeDir="false" afterPath="$PROJECT_DIR$/lib/todo/server.ex" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,20 +25,29 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="server.ex" pinned="false" current-in-tab="true">
+      <file leaf-file-name="server.ex" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/todo/server.ex">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="3" lean-forward="true" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
+            <state relative-caret-position="51">
+              <caret line="3" column="14" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cache.ex" pinned="false" current-in-tab="false">
+      <file leaf-file-name="database.ex" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/todo/database.ex">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" column="10" lean-forward="true" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cache.ex" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/todo/cache.ex">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="57" selection-start-line="6" selection-start-column="57" selection-end-line="6" selection-end-column="57" />
+            <state relative-caret-position="170">
+              <caret line="10" column="35" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -55,6 +69,7 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/lib/todo/list.ex" />
+        <option value="$PROJECT_DIR$/lib/todo/database.ex" />
         <option value="$PROJECT_DIR$/lib/todo/server.ex" />
         <option value="$PROJECT_DIR$/lib/todo/cache.ex" />
       </list>
@@ -135,12 +150,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1542812851440</updated>
-      <workItem from="1542812852614" duration="2731000" />
+      <workItem from="1542812852614" duration="6033000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2731000" />
+    <option name="totallyTimeSpent" value="6033000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="873" extended-state="0" />
@@ -181,17 +196,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/todo/cache.ex">
+    <entry file="file://$PROJECT_DIR$/lib/todo/database.ex">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="57" selection-start-line="6" selection-start-column="57" selection-end-line="6" selection-end-column="57" />
+        <state relative-caret-position="85">
+          <caret line="5" column="10" lean-forward="true" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/todo/server.ex">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="14" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/todo/cache.ex">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
-          <caret line="10" column="3" lean-forward="true" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
+          <caret line="10" column="35" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
         </state>
       </provider>
     </entry>
