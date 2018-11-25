@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eb4ef001-2a6d-4ac3-b27a-dcfe78a7ab78" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/lib/todo/Todo.DatabaseWorker.ex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/todo/supervisor.ex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/todo/Todo.DatabaseWorker.ex" beforeDir="false" afterPath="$PROJECT_DIR$/lib/todo/database_worker.ex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/todo/cache.ex" beforeDir="false" afterPath="$PROJECT_DIR$/lib/todo/cache.ex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/todo/database.ex" beforeDir="false" afterPath="$PROJECT_DIR$/lib/todo/database.ex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/todo/server.ex" beforeDir="false" afterPath="$PROJECT_DIR$/lib/todo/server.ex" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -16,11 +18,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+      <file leaf-file-name="supervisor.ex" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/todo/supervisor.ex">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="9" selection-start-line="9" selection-end-line="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="database.ex" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/todo/database.ex">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" selection-start-line="17" selection-end-line="17" />
+            <state relative-caret-position="85">
+              <caret line="5" column="37" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -28,17 +39,26 @@
       <file leaf-file-name="cache.ex" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/todo/cache.ex">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="42" selection-start-line="3" selection-start-column="42" selection-end-line="3" selection-end-column="42" />
+            <state relative-caret-position="136">
+              <caret line="8" column="21" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Todo.DatabaseWorker.ex" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/todo/Todo.DatabaseWorker.ex">
+      <file leaf-file-name="server.ex" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/todo/server.ex">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
+            <state relative-caret-position="85">
+              <caret line="5" column="24" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="database_worker.ex" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/todo/database_worker.ex">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" column="24" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -60,9 +80,11 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/lib/todo/list.ex" />
-        <option value="$PROJECT_DIR$/lib/todo/server.ex" />
+        <option value="$PROJECT_DIR$/lib/todo/supervisor.ex" />
         <option value="$PROJECT_DIR$/lib/todo/Todo.DatabaseWorker.ex" />
+        <option value="$PROJECT_DIR$/lib/todo/database_worker.ex" />
         <option value="$PROJECT_DIR$/lib/todo/database.ex" />
+        <option value="$PROJECT_DIR$/lib/todo/server.ex" />
         <option value="$PROJECT_DIR$/lib/todo/cache.ex" />
       </list>
     </option>
@@ -147,12 +169,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1542812851440</updated>
-      <workItem from="1542812852614" duration="15626000" />
+      <workItem from="1542812852614" duration="18661000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15626000" />
+    <option name="totallyTimeSpent" value="18661000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="873" extended-state="0" />
@@ -186,10 +208,10 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/lib/todo/server.ex">
+    <entry file="file://$PROJECT_DIR$/lib/todo/supervisor.ex">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="3" lean-forward="true" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
+        <state relative-caret-position="153">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
         </state>
       </provider>
     </entry>
@@ -200,24 +222,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/todo/Todo.DatabaseWorker.ex">
+    <entry file="file://$PROJECT_DIR$/lib/todo/server.ex">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
+        <state relative-caret-position="85">
+          <caret line="5" column="24" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/todo/database_worker.ex">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="24" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/todo/database.ex">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        <state relative-caret-position="85">
+          <caret line="5" column="37" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="37" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/todo/cache.ex">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="42" selection-start-line="3" selection-start-column="42" selection-end-line="3" selection-end-column="42" />
+        <state relative-caret-position="136">
+          <caret line="8" column="21" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
         </state>
       </provider>
     </entry>
