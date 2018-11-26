@@ -1,10 +1,9 @@
 defmodule Todo.Database do
-  use GenServer
   @db_folder "./persist"
+  @pool_size 3
 
-  def start_link() do
-    IO.puts("Starting database server")
-    GenServer.start_link(__MODULE__, nil, name: __MODULE__)
+  def start_link(db_folder) do
+    Todo.PoolSupervisor.start_link(db_folder, @pool_size)
   end
 
   def store(key, value) do
@@ -20,26 +19,7 @@ defmodule Todo.Database do
   end
 
   defp choose_worker(key) do
-    GenServer.call(__MODULE__, {:choose_worker, key})
+    :erlange.phash2(key, @pool_size) + 1
   end
 
-  @impl GenServer
-  def init(_) do
-    File.mkdir_p!(@db_folder)
-    {:ok, start_workers()}
-  end
-
-  @impl GenServer
-  def handle_call({:choose_worker, key}, _, workers) do
-    worker_key = :erlang.phash2(key, 3)
-    {:reply, Map.get(workers, worker_key), workers}
-  end
-
-#  defp file_name(db_folder, key), do: "#{db_folder}/#{key}"
-  defp start_workers() do
-    for i <- 1..3, into: %{} do
-      {:ok, pid} = Todo.DatabaseWorker.start_link(@db_folder)
-      {i - 1, pid}
-    end
-  end
 end

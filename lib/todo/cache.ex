@@ -11,7 +11,7 @@ defmodule Todo.Cache do
   end
 
   def init(_) do
-    Todo.Database.start_link()
+#    Todo.Database.start_link()
     {:ok, Map.new}
   end
 
