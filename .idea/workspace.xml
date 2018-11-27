@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="eb4ef001-2a6d-4ac3-b27a-dcfe78a7ab78" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/lib/todo/pool_supervisor.ex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/todo/process_registry.ex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/todo/cache.ex" beforeDir="false" afterPath="$PROJECT_DIR$/lib/todo/cache.ex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/todo/database.ex" beforeDir="false" afterPath="$PROJECT_DIR$/lib/todo/database.ex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/todo/database_worker.ex" beforeDir="false" afterPath="$PROJECT_DIR$/lib/todo/database_worker.ex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/todo/supervisor.ex" beforeDir="false" afterPath="$PROJECT_DIR$/lib/todo/supervisor.ex" afterDir="false" />
-    </list>
+    <list default="true" id="eb4ef001-2a6d-4ac3-b27a-dcfe78a7ab78" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -181,12 +173,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1542812851440</updated>
-      <workItem from="1542812852614" duration="25995000" />
+      <workItem from="1542812852614" duration="26492000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25995000" />
+    <option name="totallyTimeSpent" value="26492000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="873" extended-state="0" />
