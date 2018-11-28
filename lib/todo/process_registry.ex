@@ -16,13 +16,9 @@ defmodule Todo.ProcessRegistry do
     end
   end
 
-  def register_name(key, pid) do
-    GenServer.call(:process_registry, {:register_name, key, pid})
-  end
-
-  def whereis_name(key) do
-    GenServer.call(:process_registry, {:whereis_name, key})
-  end
+  def register_name(key, pid), do: GenServer.call(:process_registry, {:register_name, key, pid})
+  def whereis_name(key), do: GenServer.call(:process_registry, {:whereis_name, key})
+  def unregister_name(key), do: GenServer.cast(:process_registry, {:unregister_name, key})
 
   def init(_), do: {:ok, Map.new}
 
@@ -44,8 +40,10 @@ defmodule Todo.ProcessRegistry do
     {:noreply, deregister_pid(process_registry, pid)}
   end
 
-  defp deregister_pid(process_registry, pid) do
-    Map.delete(process_registry, pid)
+  defp deregister_pid(registry, pid_to_remove) do
+    registry
+    |> Enum.filter(fn {_key, pid} -> pid != pid_to_remove end)
+    |> Enum.into(%{})
   end
 
 end
