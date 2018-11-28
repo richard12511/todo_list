@@ -1,18 +1,14 @@
 defmodule Todo.Supervisor do
   use Supervisor
 
-  def start_link do
-    IO.puts("Starting #{__MODULE__}")
-    Supervisor.start_link(__MODULE__, nil)
-  end
+  def start_link, do: Supervisor.start_link(__MODULE__, nil, name: :supervisor)
 
   def init(_) do
-    processes = [
+    children = [
       worker(Todo.ProcessRegistry, []),
-      supervisor(Todo.Database, ["./persist/"]),
-      supervisor(Todo.ServerSupervisor, []),
-      worker(Todo.Cache, [])
+      supervisor(Todo.SystemSupervisor, [])
     ]
-    supervise(processes, strategy: :one_for_one)
+
+    supervise(children, strategy: :rest_for_one)
   end
 end
