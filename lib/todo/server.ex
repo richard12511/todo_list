@@ -22,5 +22,5 @@ defmodule Todo.Server do
   end
 
   def handle_call({:entries, date}, _, {_, todo_list} = state), do: {:reply, Todo.List.entries(todo_list, date), state}
-  defp via_tuple(name), do: {:via, Todo.ProcessRegistry, {:todo_server, name}}
+  defp via_tuple(name), do: {:via, Todo.ProcessRegistry, {:n, :l, {:todo_server, name}}}
 end
