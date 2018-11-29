@@ -16,34 +16,41 @@ defmodule Todo.ProcessRegistry do
     end
   end
 
-  def register_name(key, pid), do: GenServer.call(:process_registry, {:register_name, key, pid})
-  def whereis_name(key), do: GenServer.call(:process_registry, {:whereis_name, key})
-  def unregister_name(key), do: GenServer.cast(:process_registry, {:unregister_name, key})
-
-  def init(_), do: {:ok, Map.new}
-
-  def handle_call({:register_name, key, pid}, _, process_registry) do
-    case Map.get(process_registry, key) do
-      nil ->
-        Process.monitor(pid)
-        {:reply, :yes, Map.put(process_registry, key, pid)}
-      _ ->
-        {:reply, :no, process_registry}
+  def whereis_name(key) do
+    case :ets.lookup(:ets_process_registry, key) do
+      [{^key, pid}] -> pid
+      _ -> :undefined
     end
   end
 
-  def handle_call({:whereis_name, key}, _, process_registry) do
-    {:reply, Map.get(process_registry, key, :undefined), process_registry}
+  def register_name(key, pid), do: GenServer.call(:process_registry, {:register_name, key, pid})
+  def unregister_name(key), do: GenServer.cast(:process_registry, {:unregister_name, key})
+
+  #server
+  def init(_) do
+    :ets.new(:ets_process_registry, [:named_table])
+    {:ok, nil}
   end
 
-  def handle_info({:DOWN, _, :process, pid, _}, process_registry) do
-    {:noreply, deregister_pid(process_registry, pid)}
+  def handle_call({:register_name, key, pid}, _, _) do
+    case whereis_name(key) do
+      :undefined ->
+        :ets.insert(:ets_process_registry, {key, pid})
+        Process.monitor(pid)
+        {:reply, :yes, nil}
+      _ ->
+        {:reply, :no, nil}
+    end
   end
 
-  defp deregister_pid(registry, pid_to_remove) do
-    registry
-    |> Enum.filter(fn {_key, pid} -> pid != pid_to_remove end)
-    |> Enum.into(%{})
+  def handle_cast({:unregister_name, key}, _) do
+    :ets.match_delete(:ets_process_registry, key)
+    {:noreply, nil}
+  end
+
+  def handle_info({:DOWN, _, :process, pid, _}, _) do
+    :ets.match_delete(:ets_process_registry, {:_, pid})
+    {:noreply, nil}
   end
 
 end
