@@ -5,7 +5,15 @@ defmodule Todo.Database do
     Todo.PoolSupervisor.start_link(db_folder, @pool_size)
   end
 
-  def store(key, value) do
+  def store(key, data) do
+    {results, bad_nodes} =
+      :rpc.multicall(__MODULE__, :store_local, [key, data], :timer.seconds(5))
+
+    Enum.each(bad_nodes, &IO.puts("store failed on node #{&1}"))
+    :ok
+  end
+
+  def store_local(key, value) do
     key
     |> choose_worker()
     |> Todo.DatabaseWorker.store(key, value)

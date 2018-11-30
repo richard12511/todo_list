@@ -6,18 +6,21 @@ defmodule Todo.DatabaseWorker do
     GenServer.start_link(__MODULE__, db_folder, name: via_tuple(worker_id))
   end
 
-  def store(worker_id, key, value), do: GenServer.cast(via_tuple(worker_id), {:store, key, value})
+  def store(worker_id, key, value), do: GenServer.call(via_tuple(worker_id), {:store, key, value})
   def get(worker_id, key), do: GenServer.call(via_tuple(worker_id), {:get, key})
 
   def init(db_folder) do
+    [node_name, _] = "#{node}" |> String.split("@")
+    db_folder = "#{db_folder}/#{node_name}/"
+    File.mkdir_p(db_folder)
     {:ok, db_folder}
   end
 
-  def handle_cast({:store, key, value}, db_folder) do
+  def handle_call({:store, key, value}, _, db_folder) do
     file_name(db_folder, key)
     |> File.write!(:erlang.term_to_binary(value))
 
-    {:noreply, db_folder}
+    {:reply, :ok, db_folder}
   end
 
   def handle_call({:get, key}, _, db_folder) do

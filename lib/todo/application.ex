@@ -2,6 +2,8 @@ defmodule Todo.Application do
   use Application
 
   def start(_, _) do
-    Todo.SystemSupervisor.start_link()
+    response = Todo.SystemSupervisor.start_link()
+#    Todo.Web.start_server()
+    response
   end
 end

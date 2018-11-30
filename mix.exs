@@ -23,7 +23,10 @@ defmodule Todo.MixProject do
   defp deps do
     [
       {:gproc, "0.3.1"},
-      {:meck, "0.8.2", only: :test}
+#      {:cowboy, "1.0.0"},
+#      {:plug, "0.10.0"},
+      {:meck, "0.8.2", only: :test},
+#      {:httpoison, "0.4.3", only: :test}
       # {:dep_from_hexpm, "~> 0.3.0"},
       # {:dep_from_git, git: "https://github.com/elixir-lang/my_dep.git", tag: "0.1.0"},
     ]
