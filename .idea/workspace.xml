@@ -2,14 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eb4ef001-2a6d-4ac3-b27a-dcfe78a7ab78" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/lib/todo/web.ex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/todo/application.ex" beforeDir="false" afterPath="$PROJECT_DIR$/lib/todo/application.ex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/todo/cache.ex" beforeDir="false" afterPath="$PROJECT_DIR$/lib/todo/cache.ex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/todo/database.ex" beforeDir="false" afterPath="$PROJECT_DIR$/lib/todo/database.ex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/todo/database_worker.ex" beforeDir="false" afterPath="$PROJECT_DIR$/lib/todo/database_worker.ex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/todo/server.ex" beforeDir="false" afterPath="$PROJECT_DIR$/lib/todo/server.ex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/todo/system_supervisor.ex" beforeDir="false" afterPath="$PROJECT_DIR$/lib/todo/system_supervisor.ex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mix.exs" beforeDir="false" afterPath="$PROJECT_DIR$/mix.exs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mix.lock" beforeDir="false" afterPath="$PROJECT_DIR$/mix.lock" afterDir="false" />
     </list>
@@ -31,20 +23,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="server.ex" pinned="false" current-in-tab="true">
+      <file leaf-file-name="server.ex" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/todo/server.ex">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="32" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
+            <state relative-caret-position="102">
+              <caret line="6" column="5" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mix.exs" pinned="false" current-in-tab="false">
+      <file leaf-file-name="mix.exs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mix.exs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="25" column="26" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="26" />
+            <state relative-caret-position="510">
+              <caret line="30" selection-start-line="30" selection-end-line="30" />
             </state>
           </provider>
         </entry>
@@ -99,13 +91,13 @@
         <option value="$PROJECT_DIR$/lib/todo/supervisor.ex" />
         <option value="$PROJECT_DIR$/lib/todo/process_registry.ex" />
         <option value="$PROJECT_DIR$/lib/todo/web.ex" />
-        <option value="$PROJECT_DIR$/mix.exs" />
         <option value="$PROJECT_DIR$/lib/todo/application.ex" />
         <option value="$PROJECT_DIR$/lib/todo/cache.ex" />
         <option value="$PROJECT_DIR$/lib/todo/system_supervisor.ex" />
         <option value="$PROJECT_DIR$/lib/todo/database.ex" />
         <option value="$PROJECT_DIR$/lib/todo/database_worker.ex" />
         <option value="$PROJECT_DIR$/lib/todo/server.ex" />
+        <option value="$PROJECT_DIR$/mix.exs" />
       </list>
     </option>
   </component>
@@ -190,12 +182,12 @@
       <option name="presentableId" value="Default" />
       <updated>1542812851440</updated>
       <workItem from="1542812852614" duration="26492000" />
-      <workItem from="1543529660445" duration="7088000" />
+      <workItem from="1543529660445" duration="7308000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33580000" />
+    <option name="totallyTimeSpent" value="33800000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="873" extended-state="0" />
@@ -311,13 +303,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mix.exs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="26" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/todo/database_worker.ex">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -334,8 +319,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/todo/server.ex">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="32" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
+        <state relative-caret-position="102">
+          <caret line="6" column="5" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mix.exs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="30" selection-start-line="30" selection-end-line="30" />
         </state>
       </provider>
     </entry>

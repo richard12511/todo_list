@@ -1,6 +1,8 @@
 %{
+  "conform": {:hex, :conform, "0.10.5", "6a83455990b2f4c6e98992172a635c61760b48a668e3082c6fd64ffcf12dc771", [:mix], [], "hexpm"},
   "cowboy": {:hex, :cowboy, "1.0.0", "d0b46a5e5f971c5543eb46f86fe76b9add567d12fb5262a852b8f27c64c0555d", [:make, :rebar], [{:cowlib, "~> 1.0.0", [hex: :cowlib, repo: "hexpm", optional: false]}, {:ranch, "~> 1.0", [hex: :ranch, repo: "hexpm", optional: false]}], "hexpm"},
   "cowlib": {:hex, :cowlib, "1.0.2", "9d769a1d062c9c3ac753096f868ca121e2730b9a377de23dec0f7e08b1df84ee", [:make], [], "hexpm"},
+  "exrm": {:hex, :exrm, "0.14.11", "da8354d290387d79ffaf8c95bb2863a9c6f97ff0a36f322f565e2902de25bd6a", [:mix], [{:conform, "~> 0.10.5", [hex: :conform, repo: "hexpm", optional: false]}], "hexpm"},
   "gproc": {:hex, :gproc, "0.3.1", "ec14f40cb941bde3f940de59c11e59beb2977e90dbae72fab3ddf77743fd4ea9", [:rebar], [], "hexpm"},
   "hackney": {:hex, :hackney, "0.14.3", "fb8c6946bef651c6796f46fbee5d3891581b755baa9d373bc2da97c0ffa56ff1", [:make, :rebar], [{:idna, "1.0.1", [hex: :idna, repo: "hexpm", optional: false]}], "hexpm"},
   "httpoison": {:hex, :httpoison, "0.4.3", "6fc5fe17733d296c53db51ad751e1b3d8d1b4cd68b4a1d556fd9a1fecfc7786c", [:mix], [{:hackney, "~> 0.14.1", [hex: :hackney, repo: "hexpm", optional: false]}], "hexpm"},
